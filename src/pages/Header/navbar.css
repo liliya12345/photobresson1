@@ -1,0 +1,61 @@
+.nav, .nav:active, .nav:hover {
+    border-style: none;
+    box-shadow: none;
+    color: white;
+   z-index: 5;
+    background-color: #0c0c0c;
+
+
+}
+
+.nav .nav-text {
+    font-family: Roboto sans-serif;
+    line-height: 1.5;
+    color: white;
+
+}
+
+.nav p {
+    font-size: 16px;
+}
+.hero{
+    background-image: url(/src/assets/h3.jpg);
+    filter: brightness(90%);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 120vh;
+    justify-content: center;
+    align-content: center;
+
+}
+.hero  h1{
+    font-weight: 700;
+    font-size: 70px;
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+
+}
+.hero-content{
+    opacity: 1;
+    z-index: 3;
+}
+.btn-hero{
+    font-size: 12px;
+    color: black;
+    border-radius: 30px;
+
+}
+.btn-hero:hover{
+    font-size: 12px;
+    color: black;
+    border-radius: 30px;
+    border-color: blue;
+
+}
+.navbar.togler.icon{
+    fill: white;
+}
