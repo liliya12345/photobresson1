@@ -6,7 +6,7 @@ import logo from "../../assets/logo.png";
 export default function Header(props) {
     return (
         <div className="position-relative">
-            <Navbar expand="lg" className="nav nav-text text-white position-fixed w-100" fluid="true">
+            <Navbar expand="lg" className=" nav nav-text text-white position-fixed w-100" fluid="true">
                 {/* Логотип слева */}
                 <Navbar.Brand href="#home" className="text-white ms-3">
                     <img

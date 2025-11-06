@@ -187,7 +187,7 @@ function About(props) {
     };
 
     return (
-        <div className="story-page cosmic-bg">
+        <div className="story-page cosmic-bg author-title ">
             {/* Герой секция */}
             <Container fluid className="story-hero-section">
                 <Row className="justify-content-center">
@@ -196,7 +196,7 @@ function About(props) {
                             <Badge bg="light" text="dark" className="story-badge">
                                 My Professional Journey
                             </Badge>
-                            <h1 className="story-hero-title">
+                            <h1>
                                 Liliya Sayfutdinova
                             </h1>
                             <p className="story-hero-subtitle">
@@ -263,7 +263,7 @@ function About(props) {
                                         <div className="author-info">
                                             <div className="author-avatar">LS</div>
                                             <div className="author-details">
-                                                <h3 className="author-name">Liliya Sayfutdinova</h3>
+                                                <h4 className="author-name">Liliya Sayfutdinova</h4>
                                                 <p className="author-title">From Finance to Code: My Transformation Story</p>
                                             </div>
                                         </div>
