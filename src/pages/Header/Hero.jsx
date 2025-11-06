@@ -7,13 +7,32 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionAbout from "../Section/SectionAbout";
 import About from "../Section/About";
+import Footer from "../Footer";
 import SectionHobby from "../Section/SectionHobby";
-import { useSpring,animated } from '@react-spring/web'
+import { useSpring,animated } from '@react-spring/web';
+import Lottie from 'react-lottie';
+import animationData from '../../assets/bag.json';
+import animationData2 from '../../assets/wellcome.json';
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 
 const url = (name: string, wrap = false) =>
     `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
-
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
+const defaultOptions2 = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData2,
+    rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+    }
+};
 function Hero(props) {
 
     useEffect(() => {
@@ -30,13 +49,18 @@ function Hero(props) {
     return (
         <>
             <div className="hero nav-text">
+                <Lottie
+                    options={defaultOptions2}
+                    padding={10}
+                    height={100}
+                    width={500}
+                />
                 <Container className="d-flex justify-content-center align-items-center text-center">
                     <Row>
                         <Col lg={12} md={12} sm={12}>
                             <div className="hero-content">
-                                <h4 data-aos="fade-right" data-aos-delay="50">HAY! THERE</h4>
                                 <div className="box-section">
-                                    <h1 data-aos="fade-left" data-aos-delay="50">I AM LILIYA</h1>
+                                    <h1  paddingTop ='10px' data-aos="fade-left" data-aos-delay="50">I AM LILIYA</h1>
                                     <h2 data-aos="fade-up" data-aos-delay="50">A PROFESSIONAL DEVELOPER</h2>
                                     <button
                                         onClick={handleButtonClick}
@@ -148,23 +172,64 @@ function Hero(props) {
                     </ParallaxLayer>
 
 
-                    <ParallaxLayer
-                        offset={2}
-                        speed={-0}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'end',
-                            paddingBottom: '20%',
-                            justifyContent: 'center',
-                        }}
-                        onClick={() => parallax.current.scrollTo(2)}>
-                        <img src={tower} style={{ width: '20%' }} />
+                    <ParallaxLayer>
+                        <ParallaxLayer
+                            offset={2}
+                            speed={-0}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'end',
+                                paddingBottom: '25%',
+                                marginLeft:'20%',
+                                justifyContent: 'center',
+                                rotate: '25deg',
+                                marginHeight:'30%'
+                            }}
+                            onClick={() => parallax.current.scrollTo(2)}>
+
+                            <img src={tower} style={{ width: '20%' }} />
+
+                        </ParallaxLayer>
+                        <ParallaxLayer
+                            offset={2}
+                            speed={-0}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'end',
+                                paddingBottom: '25%',
+                                justifyContent: 'center',
+                                marginHeight:'30%'
+                            }}
+                            onClick={() => parallax.current.scrollTo(2)}>
+                            <Lottie
+                                options={defaultOptions}
+                                height={300}
+                                width={300}
+                            />
+
+                        </ParallaxLayer>
+                        <ParallaxLayer
+                            offset={2}
+                            speed={-0}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'end',
+                                justifyContent: 'center',
+                            }}
+                            onClick={() => parallax.current.scrollTo(2)}>
+                            <div style={{ width: '100%', marginEnd:'1%'}}> {/* Обертка с шириной */}
+                                <Footer />
+                            </div>
+
+                        </ParallaxLayer>
+
 
                     </ParallaxLayer>
 
-
                 </Parallax>
+
             </div>
+
         </>
     );
 }

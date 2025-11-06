@@ -17,7 +17,7 @@ export default function Home(props) {
             {/*<SectionAbout/>*/}
             {/*<About/>*/}
 
-            {/*<Footer/>*/}
+
        </>
     );
 }
